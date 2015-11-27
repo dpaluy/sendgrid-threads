@@ -17,9 +17,9 @@ Jeweler::Tasks.new do |gem|
   gem.name = "sendgrid-threads"
   gem.homepage = "http://github.com/dpaluy/sendgrid-threads"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "david@paluy.org"
+  gem.summary = %Q{Ruby Gem for the SendGrid Threads API https://threads.io/ }
+  gem.description = %Q{This Gem allows you to send Threads events using native Ruby https://docs.threads.io/}
+  gem.email = "dpaluy@gmail.com"
   gem.authors = ["David Paluy"]
   # dependencies defined in Gemfile
 end
