@@ -1,6 +1,7 @@
 require_relative 'sendgrid_threads/config'
 require_relative 'sendgrid_threads/exceptions'
 require_relative 'sendgrid_threads/client'
+require_relative 'sendgrid_threads/api_connection'
 require_relative 'sendgrid_threads/engine' if defined?(Rails)
 
 module SendgridThreads

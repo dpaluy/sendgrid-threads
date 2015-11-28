@@ -3,6 +3,7 @@ require 'sendgrid-threads'
 require 'byebug'
 require 'webmock/rspec'
 require 'timecop'
+require 'active_support/all'
 
 module SimpleCov::Configuration
   def clean_filters

@@ -1,6 +1,7 @@
 source "http://rubygems.org"
 
 group :development, :test do
+  gem 'activesupport', "~> 4.0"
   gem "rspec", "~> 3.0"
   gem "rdoc", "~> 3.12"
   gem "bundler", "~> 1.10"
