@@ -36,6 +36,7 @@ Gem::Specification.new do |s|
     "lib/sendgrid_threads/config.rb",
     "lib/sendgrid_threads/engine.rb",
     "lib/sendgrid_threads/exceptions.rb",
+    "sendgrid-threads.gemspec",
     "spec/sendgrid-threads_spec.rb",
     "spec/sendgrid_threads/api_spec.rb",
     "spec/sendgrid_threads/client_spec.rb",
