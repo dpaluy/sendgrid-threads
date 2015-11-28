@@ -10,5 +10,6 @@ group :development, :test do
   gem "pry-byebug"
   gem "webmock"
   gem "timecop"
-  gem "codeclimate-test-reporter", require: nil
+  gem "codeclimate-test-reporter", require: false
+  gem 'coveralls', require: false
 end
