@@ -25,11 +25,11 @@ module SendgridThreads
       endpoint_with_version = "/#{VERSION}/#{endpoint}"
       response = conn.post(endpoint_with_version) do |req|
         req.headers = HEADERS.merge('User-Agent' => @user_agent)
-        req.body = body if body
+        req.body = JSON(body) if body
       end
       fail SendgridThreads::Exception, response.body if raise_exceptions? && response.status != 200
 
-      response.body
+      response
     end
 
     def conn

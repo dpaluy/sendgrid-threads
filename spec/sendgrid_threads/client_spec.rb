@@ -34,4 +34,16 @@ describe SendgridThreads::Client do
       expect {client.post("mock")}.not_to raise_error
     end
   end
+
+  describe "#post" do
+    it 'should make a request to sendgrid' do
+      stub_request(:post, "https://foobar:abc123@input.threads.io/v1/mock").
+         with(:body => {"attrs"=>2, "params"=>1}).
+         to_return(body: {message: 'success'}.to_json, status: 200, headers: {'X-TEST' => 'yes'})
+
+      client = SendgridThreads::Client.new(key: 'foobar', secret: 'abc123')
+      res = client.post("mock", {params: 1, attrs: 2})
+      expect(res.status).to eq(200)
+    end
+  end
 end
