@@ -4,20 +4,17 @@ require 'byebug'
 require 'webmock/rspec'
 require 'timecop'
 require 'active_support/all'
+require 'codeclimate-test-reporter'
 
-module SimpleCov::Configuration
-  def clean_filters
-    @filters = []
-  end
-end
-
-ENV["COVERAGE"] && SimpleCov.start do
-  SimpleCov.configure do
-    clean_filters
-  end
-
+if ENV["COVERAGE"]
   WebMock.disable_net_connect!(allow: "codeclimate.com")
-  require "codeclimate-test-reporter"
+
+  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+    SimpleCov::Formatter::HTMLFormatter,
+    CodeClimate::TestReporter::Formatter
+  ]
+
+  SimpleCov.start
   CodeClimate::TestReporter.start
 end
 
