@@ -37,28 +37,28 @@ describe SendgridThreads::Api do
 
     it "#identify" do
       expect(connection_mock).to receive(:post).with(
-        "identify", {userId: user_id, traits: traits, timestamp: "2015-11-01T12:00:00Z"}
+        "identify", {userId: user_id, traits: traits, timestamp: "2015-11-01T12:00:00.000Z"}
       )
       subject.identify(user_id, traits)
     end
 
     it "#track" do
       expect(connection_mock).to receive(:post).with(
-        "track", {userId: user_id, event: "event", timestamp: "2015-11-01T12:00:00Z", properties: properties }
+        "track", {userId: user_id, event: "event", timestamp: "2015-11-01T12:00:00.000Z", properties: properties }
       )
       subject.track(user_id, "event", properties)
     end
 
     it "#page_view" do
       expect(connection_mock).to receive(:post).with(
-        "page", {userId: user_id, name: "Page Name", timestamp: "2015-11-01T12:00:00Z", properties: properties }
+        "page", {userId: user_id, name: "Page Name", timestamp: "2015-11-01T12:00:00.000Z", properties: properties }
       )
       subject.page_view(user_id, "Page Name", properties)
     end
 
     it "#remove" do
       expect(connection_mock).to receive(:post).with(
-        "remove", {userId: user_id, timestamp: "2015-11-01T12:00:00Z" }
+        "remove", {userId: user_id, timestamp: "2015-11-01T12:00:00.000Z" }
       )
       subject.remove(user_id)
     end
