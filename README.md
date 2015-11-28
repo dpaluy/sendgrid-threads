@@ -10,6 +10,7 @@ This Gem allows you to send Threads events using native Ruby. For more details, 
 [![Build Status](https://secure.travis-ci.org/dpaluy/sendgrid-threads.png)](http://travis-ci.org/dpaluy/sendgrid-threads)
 [![Code Climate](https://codeclimate.com/github/dpaluy/sendgrid-threads/badges/gpa.svg)](https://codeclimate.com/github/dpaluy/sendgrid-threads)
 [![Dependency Status](https://gemnasium.com/dpaluy/sendgrid-threads.svg)](https://gemnasium.com/dpaluy/sendgrid-threads)
+[![Test Coverage](https://codeclimate.com/github/dpaluy/sendgrid-threads/badges/coverage.svg)](https://codeclimate.com/github/dpaluy/sendgrid-threads/coverage)
 
 ## Installation
 
