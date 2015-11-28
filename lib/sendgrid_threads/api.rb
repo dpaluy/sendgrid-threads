@@ -1,5 +1,5 @@
 module SendgridThreads
-  class ApiConnection
+  class Api
     attr_reader :connection
 
     def initialize( params = {} )

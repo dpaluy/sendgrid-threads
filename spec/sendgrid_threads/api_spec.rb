@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe SendgridThreads::ApiConnection do
+describe SendgridThreads::Api do
 
-  let(:connection_mock) { instance_double("ApiConnection") }
+  let(:connection_mock) { instance_double("Api") }
   let(:connection_params) do
     {key: 'foobar', secret: 'abc123'}
   end
@@ -17,7 +17,7 @@ describe SendgridThreads::ApiConnection do
 
   it "initializes a valid connection" do
     expect(SendgridThreads::Client).to receive(:new).with(connection_params).and_return(connection_mock)
-    SendgridThreads::ApiConnection.new(connection_params)
+    SendgridThreads::Api.new(connection_params)
   end
 
   describe "v1" do
@@ -33,7 +33,7 @@ describe SendgridThreads::ApiConnection do
       allow(SendgridThreads::Client).to receive(:new).with(connection_params).and_return(connection_mock)
     end
 
-    subject { SendgridThreads::ApiConnection.new(connection_params) }
+    subject { SendgridThreads::Api.new(connection_params) }
 
     it "#identify" do
       expect(connection_mock).to receive(:post).with(
