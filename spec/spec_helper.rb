@@ -1,4 +1,8 @@
 require 'simplecov'
+require 'sendgrid-threads'
+require 'byebug'
+require 'webmock/rspec'
+require 'timecop'
 
 module SimpleCov::Configuration
   def clean_filters
@@ -12,13 +16,15 @@ SimpleCov.configure do
 end
 
 ENV["COVERAGE"] && SimpleCov.start do
-  add_filter "/.rvm/"
+  WebMock.disable_net_connect!(:allow => "codeclimate.com")
+  CodeClimate::TestReporter.start
 end
+
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
 require 'rspec'
-require 'sendgrid-threads'
+require "codeclimate-test-reporter"
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
