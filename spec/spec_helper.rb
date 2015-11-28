@@ -11,12 +11,11 @@ module SimpleCov::Configuration
   end
 end
 
-SimpleCov.configure do
-  clean_filters
-  load_adapter 'test_frameworks'
-end
-
 ENV["COVERAGE"] && SimpleCov.start do
+  SimpleCov.configure do
+    clean_filters
+  end
+
   WebMock.disable_net_connect!(allow: "codeclimate.com")
   require "codeclimate-test-reporter"
   CodeClimate::TestReporter.start
