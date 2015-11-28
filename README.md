@@ -4,6 +4,13 @@ Ruby Gem for the SendGrid Threads API https://threads.io/
 
 This Gem allows you to send Threads events using native Ruby. For more details, read: https://docs.threads.io/
 
+## Status
+
+[![Gem Version](https://badge.fury.io/rb/sendgrid-threads.png)](http://badge.fury.io/rb/sendgrid-threads)
+[![Build Status](https://secure.travis-ci.org/dpaluy/sendgrid-threads.png)](http://travis-ci.org/dpaluy/sendgrid-threads)
+[![Code Climate](https://codeclimate.com/github/dpaluy/sendgrid-threads/badges/gpa.svg)](https://codeclimate.com/github/dpaluy/sendgrid-threads)
+[![Dependency Status](https://gemnasium.com/dpaluy/sendgrid-threads.svg)](https://gemnasium.com/dpaluy/sendgrid-threads)
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -16,7 +23,7 @@ And then execute:
 
 Or install it yourself using:
 
-`$ gem install sendgrid-ruby`
+`$ gem install sendgrid-threads`
 
 ## Usage
 
